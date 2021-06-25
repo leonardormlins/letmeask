@@ -25,7 +25,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
-    "lint:fix": "tslint --fix -c tslint.json 'src/**/*{.ts,.tsx}'"
+    "lint:fix": "tslint --fix -c tslint.json 'src/**/*{.ts,.tsx}'",
+    "prettier":"prettier-tslint check 'src/**/*{.ts,.tsx}'",
+    "prettier:fix": "prettier-tslint fix 'src/**/*{.ts,.tsx}'"
   },
   "eslintConfig": {
     "extends": [
