@@ -10,7 +10,8 @@
             2
         ],
         "no-object-literal-type-assertion": false,
-        "no-submodule-imports": false
+        "no-submodule-imports": false,
+        "jsx-no-lambda": false
     },
     "rulesDirectory": []
 }
