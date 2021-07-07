@@ -25,18 +25,23 @@ export function Home() {
   async function handleJoinRoom(event: FormEvent) {
     event.preventDefault();
 
-    if (roomKey.trim() === ''){
+    if (roomKey.trim() === "") {
       return;
     }
 
     const roomRef = await database.ref(`rooms/${roomKey}`).get();
 
     if (!roomRef.exists()) {
-      alert('Room does not exists.');
+      alert("Room does not exists.");
       return;
     }
 
-    history.push(`room/${roomKey}`)
+    if (roomRef.val().closedAt) {
+      alert("Room already closed.");
+      return;
+    }
+
+    history.push(`room/${roomKey}`);
   }
 
   return (
